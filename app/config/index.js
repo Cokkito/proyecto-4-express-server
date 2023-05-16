@@ -4,7 +4,7 @@ const joi = require('joi');
 dotEnv.config();
 
 const envVarsSchema = joi.object({
-	PORT: joi.number().default(5000),
+	PORT: joi.number(),
 	MONGO_DB_URI: joi.string().required(),
 	ENCRYPTION_SECRET_KEY: joi.string().required(),
 });
