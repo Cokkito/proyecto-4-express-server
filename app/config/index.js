@@ -8,6 +8,7 @@ const envVarsSchema = joi.object({
 	PORT: joi.number(),
 	MONGO_DB_URI: joi.string().required(),
 	ENCRYPTION_SECRET_KEY: joi.string().required(),
+	CORS_ORIGIN: joi.string().required(),
 });
 
 const { error, value: envVars } = envVarsSchema.validate(process.env, {
@@ -20,4 +21,5 @@ module.exports = {
 	port: envVars.PORT,
 	mongoDbUri: envVars.MONGO_DB_URI,
 	encryptionSecretKey: envVars.ENCRYPTION_SECRET_KEY,
+	corsOrigin: envVars.CORS_ORIGIN,
 };
