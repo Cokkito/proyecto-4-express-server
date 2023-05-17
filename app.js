@@ -23,7 +23,8 @@ app.use(
 app.use('/users', usersRouter);
 
 app.get('/', (req, res) => {
-	res.send('Base Express App');
+	console.log('Pinged express app');
+	res.send('Greetings');
 });
 
 module.exports = app;
