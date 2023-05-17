@@ -7,7 +7,6 @@ const cryptr = new Cryptr(encryptionSecretKey);
 
 const createUser = async (req, res) => {
 	try {
-		console.log(req);
 		const { name, email, password } = req.body;
 		const encryptedPassword = cryptr.encrypt(password);
 
