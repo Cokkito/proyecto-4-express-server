@@ -21,9 +21,9 @@ app.use(
 );
 app.use(express.static('public'));
 
-app.use('/users', usersRouter);
+app.use('api/users', usersRouter);
 
-app.get('/', (req, res) => {
+app.get('api/', (req, res) => {
 	console.log('Pinged express app');
 	res.send('Greetings');
 });
