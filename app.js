@@ -12,18 +12,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 // cors
-app.use(
-	cors({
-		origin: corsOrigin.split(','),
-		methods: ['GET', 'POST', 'UPDATE', 'DELETE', 'PATCH'],
-		credentials: true,
-	})
-);
-app.use(express.static('public'));
+app.use(cors());
 
-app.use('api/users', usersRouter);
+app.use('users', usersRouter);
 
-app.get('api/', (req, res) => {
+app.get('/', (req, res) => {
 	console.log('Pinged express app');
 	res.send('Greetings');
 });
