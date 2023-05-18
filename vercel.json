@@ -11,5 +11,15 @@
 			"src": "/(.*)",
 			"dest": "server.js"
 		}
+	],
+	"headers": [
+		{
+			"source": "/(.*)",
+			"headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+		},
+		{
+			"source": "https://proyecto-4-mora.vercel.app//(.*)",
+			"headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+		}
 	]
 }
